@@ -16,7 +16,8 @@ for i in {1..1131}
     do
         url+="$prefix$i$suffix"
         wget $url
-        echo $url
+        imageuri="P$i$suffix"
+        cuneiform -l swe -f text -o "P$i.txt" $imageuri
         url=""
     done
 
